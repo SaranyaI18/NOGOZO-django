@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+{% block content%}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img style="height: 50px;width:100px" src="{%static 'img/download.png' %}">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="{%url 'userhomepage'%}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'myorderpage'%}">Your Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'cartpage'%}">Cart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'profilepage'%}">Profile</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="form-inline my-2 my-lg-0">
+
+  	<a class = "btn btn-danger"  href = "/userlogout/">logout</a>
+    
+	
+  </div>
+
+
+</nav>
+
+{% endblock %}

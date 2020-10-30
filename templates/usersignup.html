@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<img style="display:block;margin:auto; margin-top: 40px; margin-bottom: 70px" src="{%static 'img/download.png'%}">
+
+
+
+<div style="padding: 1%; width: 300px;background-color: #87ceeb;margin: auto">
+	<form method = "post" action = "{% url 'userhomepage' %}">
+ 		{% csrf_token %}
+ 		<input type = "number" style = "margin-bottom: 5%"  class = "form-control" placeholder = "phone number" name = "phone number">
+ 		<input type = "submit" style = "display: block; margin: auto; margin-top: 5%" class = "btn btn-success" name="" value="Verify OTP">
+ 	</form>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

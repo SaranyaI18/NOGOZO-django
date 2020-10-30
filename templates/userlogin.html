@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<img style="display:block;margin:auto; margin-top: 40px; margin-bottom: 70px" src="{%static 'img/download.png'%}">
+
+<div style="padding: 1%; width: 300px;background-color: #87ceeb;margin: auto">
+	
+
+     	<form method = "post" action = "{% url 'userhomepage' %}">
+ 		{% csrf_token %}
+ 			<h1 style= ";color: blue; text-align: center"><b>Login</b></h1>
+ 			<input type = "text" style = "margin-bottom: 5%"  class = "form-control" placeholder = "username" name = "username">
+ 			<input type = "password"  class = "form-control" placeholder = "password" name= "password">
+ 			<p ><a href="{%url 'resetpage'%}" >FORGOT PASSWORD?</a></p>
+			<input type = "submit" style = "display: block; margin: auto; margin-top: 5%" class = "btn btn-success" name="">
+ 			<p style = "margin-top: 5%; text-align: center"><b>DONT HAVE ACCOUNT? <a href="{% url 'usersignuppage' %}">SIGNUP</a></b></p>
+
+		</form>
+
+	</div>
+
+
+{% endblock %}
